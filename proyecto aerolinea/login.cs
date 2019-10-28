@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+
 namespace proyecto_aerolinea
 {
     public partial class login : Form
@@ -15,6 +16,14 @@ namespace proyecto_aerolinea
         public login()
         {
             InitializeComponent();
+        }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            usuario.Clear();
+            contra.Clear();
+            usuario.Focus();
+            this.Show();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -31,30 +40,42 @@ namespace proyecto_aerolinea
             {
 
                 DataTable tabla = new DataTable();
-                MySqlCommand comando = new MySqlCommand(string.Format("select nombre, tipo from usuario where nombre='{0}' and contra='{1}'", usuario.Text, contra.Text), BdConexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
-                adaptador.Fill(tabla);
+                MySqlCommand comando = new MySqlCommand(string.Format("select * from usuario where nombre='{0}' and contra='{1}'", usuario.Text, contra.Text), BdConexion.ObtenerConexion());
+                //MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                //adaptador.Fill(tabla);
+                MySqlDataReader reader = comando.ExecuteReader();
 
-                if (tabla.Rows.Count == 1)
+                if (reader.HasRows)
                 {
-                    if (tabla.Rows[0][1].ToString() == "administrador")
+                    while (reader.Read())
                     {
-                        Form menu = new menu("admin");
-                        menu.Show();
-                        this.Hide();
+                        Usuario.nombre = reader.GetString(0);
+                        Usuario.contra = reader.GetString(1);
+                        Usuario.tipo = reader.GetString(2);
                     }
-                    else if (tabla.Rows[0][1].ToString() == "vendedor")
-                    {
-                        Form menu = new menu("vendedor");
-                        menu.Show();
-                        this.Hide();
-                    }
+                    Form menu = new menu();
+                    menu.Show();
+                    menu.FormClosed += Logout;
+                    this.Hide();
+                    //if (tabla.Rows[0][1].ToString() == "administrador")
+                    //{
+                    //    Form menu = new menu("admin");
+                    //    menu.Show();
+                    //    this.Hide();
+                    //}
+                    //else if (tabla.Rows[0][1].ToString() == "vendedor")
+                    //{
+                    //    Form menu = new menu("vendedor");
+                    //    menu.Show();
+                    //    this.Hide();
+                    //}
                 }
                 else
                 {
                     MessageBox.Show("Este usuario no está registrado", "Usuario no existe", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     usuario.Clear();
                     contra.Clear();
+                    usuario.Focus();
                 }
             }
         }
@@ -62,6 +83,22 @@ namespace proyecto_aerolinea
         private void Usuario_MouseClick(object sender, MouseEventArgs e)
         {
             ep1.Clear();
+        }
+
+        private void Contra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void Usuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                contra.Focus();
+            }
         }
     }
 }

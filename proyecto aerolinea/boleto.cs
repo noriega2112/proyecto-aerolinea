@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace proyecto_aerolinea
 {
-    public partial class pasajero : Form
+    public partial class boleto : Form
     {
-        public pasajero()
+        public boleto()
         {
             InitializeComponent();
 
-
-            if(Usuario.tipo != "administrador")
+            if (Usuario.tipo != "administrador")
                 eliminarbtn.Visible = false;
-        }
-
-        private void Pasajero_Load(object sender, EventArgs e)
-        {
 
         }
     }

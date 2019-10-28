@@ -12,12 +12,11 @@ namespace proyecto_aerolinea
 {
     public partial class menu : Form
     {
-        string usuario;
-        public menu(string pusuario = "admin")
+        public menu()
         {
             InitializeComponent();
 
-            this.usuario = pusuario;
+            label1.Text = "Bienvenido, " + Usuario.nombre.ToUpper();
         }
 
         private Form formActivo = null;
@@ -53,7 +52,13 @@ namespace proyecto_aerolinea
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+        }
+
+        private void cerrarSesionbtn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Estas seguro de cerrar sesión?", "Alerta",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
         }
     }
 }
