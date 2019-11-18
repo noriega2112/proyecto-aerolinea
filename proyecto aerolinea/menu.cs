@@ -16,7 +16,7 @@ namespace proyecto_aerolinea
         {
             InitializeComponent();
 
-            label1.Text = "Bienvenido, " + Usuario.nombre.ToUpper();
+            //label1.Text = "Bienvenido, " + Usuario.nombre.ToUpper();
         }
 
         private Form formActivo = null;

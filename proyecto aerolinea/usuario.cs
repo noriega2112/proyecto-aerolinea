@@ -12,4 +12,5 @@ namespace proyecto_aerolinea
         public static string contra { get; set; }
         public static string tipo { get; set; }
     }
+    
 }

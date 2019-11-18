@@ -100,5 +100,10 @@ namespace proyecto_aerolinea
                 contra.Focus();
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
