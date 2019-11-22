@@ -37,7 +37,7 @@ namespace proyecto_aerolinea
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            abrirHijo(new pasajero());
+            abrirHijo(new formPasajero());
         }
 
         private void Panel4_Paint(object sender, PaintEventArgs e)
@@ -47,7 +47,7 @@ namespace proyecto_aerolinea
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            abrirHijo(new boleto());
+            abrirHijo(new formBoleto());
         }
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)

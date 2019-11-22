@@ -50,5 +50,21 @@ namespace proyecto_aerolinea
                 this.Close();
             }
         }
+
+        private void cancelarbtn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Estas seguro de regresar?", "Alerta",
+             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }

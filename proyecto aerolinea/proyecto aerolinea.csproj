@@ -51,11 +51,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BdConexion.cs" />
-    <Compile Include="boleto.cs">
+    <Compile Include="bolBD.cs" />
+    <Compile Include="buscarBoleto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="boleto.Designer.cs">
-      <DependentUpon>boleto.cs</DependentUpon>
+    <Compile Include="buscarBoleto.Designer.cs">
+      <DependentUpon>buscarBoleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formAvion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAvion.Designer.cs">
+      <DependentUpon>formAvion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formboleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>formboleto.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="buscarPasajero.cs">
       <SubType>Form</SubType>
@@ -75,11 +89,11 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="pasajero.cs">
+    <Compile Include="formPasajero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pasajero.Designer.cs">
-      <DependentUpon>pasajero.cs</DependentUpon>
+    <Compile Include="formPasajero.Designer.cs">
+      <DependentUpon>formPasajero.cs</DependentUpon>
     </Compile>
     <Compile Include="pasBd.cs" />
     <Compile Include="Program.cs" />
@@ -87,8 +101,14 @@
     <Compile Include="Usuario.cs" />
     <Compile Include="_boleto.cs" />
     <Compile Include="_pasajero.cs" />
-    <EmbeddedResource Include="boleto.resx">
-      <DependentUpon>boleto.cs</DependentUpon>
+    <EmbeddedResource Include="buscarBoleto.resx">
+      <DependentUpon>buscarBoleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAvion.resx">
+      <DependentUpon>formAvion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formboleto.resx">
+      <DependentUpon>formboleto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="buscarPasajero.resx">
       <DependentUpon>buscarPasajero.cs</DependentUpon>
@@ -99,8 +119,8 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pasajero.resx">
-      <DependentUpon>pasajero.cs</DependentUpon>
+    <EmbeddedResource Include="formPasajero.resx">
+      <DependentUpon>formPasajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

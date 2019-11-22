@@ -15,6 +15,7 @@ namespace proyecto_aerolinea
         public string genero { get; set; }
         public string email { get; set; }
         public string telefono { get; set; }
+
         
 
         public _pasajero() { }

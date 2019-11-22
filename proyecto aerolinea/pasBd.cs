@@ -36,7 +36,9 @@ namespace proyecto_aerolinea
             conexion.Close();
             return pPasajero;
         }
-        
+
+
+
         public static List<_pasajero> BuscarT()
         {
             
@@ -96,11 +98,11 @@ namespace proyecto_aerolinea
             return retorno;
         }
 
-        public static int Eliminar(_pasajero pPasajero)
+        public static int Eliminar(int id)
         {
             int retorno = 0;
             MySqlConnection conexion = BdConexion.ObtenerConexion();
-            MySqlCommand comando = new MySqlCommand(String.Format("delete * from pasajero where pas_id = '{0}'", pPasajero.id), conexion);
+            MySqlCommand comando = new MySqlCommand(String.Format("delete from pasajero where pas_id = '{0}'", id), conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
