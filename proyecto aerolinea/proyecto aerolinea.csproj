@@ -51,31 +51,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BdConexion.cs" />
-    <Compile Include="bolBD.cs" />
-    <Compile Include="buscarBoleto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="buscarBoleto.Designer.cs">
-      <DependentUpon>buscarBoleto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formAvion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formAvion.Designer.cs">
-      <DependentUpon>formAvion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formboleto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>formboleto.cs</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="buscarPasajero.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="buscarPasajero.Designer.cs">
       <DependentUpon>buscarPasajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPasajero.Designer.cs">
+      <DependentUpon>formPasajero.cs</DependentUpon>
     </Compile>
     <Compile Include="menu.cs">
       <SubType>Form</SubType>
@@ -89,38 +75,23 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="formPasajero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formPasajero.Designer.cs">
-      <DependentUpon>formPasajero.cs</DependentUpon>
-    </Compile>
     <Compile Include="pasBd.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="_boleto.cs" />
     <Compile Include="_pasajero.cs" />
-    <EmbeddedResource Include="buscarBoleto.resx">
-      <DependentUpon>buscarBoleto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formAvion.resx">
-      <DependentUpon>formAvion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formboleto.resx">
-      <DependentUpon>formboleto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="buscarPasajero.resx">
       <DependentUpon>buscarPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPasajero.resx">
+      <DependentUpon>formPasajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formPasajero.resx">
-      <DependentUpon>formPasajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

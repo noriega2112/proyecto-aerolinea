@@ -47,7 +47,7 @@ namespace proyecto_aerolinea
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            abrirHijo(new formBoleto());
+            //abrirHijo(new formBoleto());
         }
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
