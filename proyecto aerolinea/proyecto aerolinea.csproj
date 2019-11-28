@@ -50,17 +50,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BdConexion.cs" />
-    <Compile Include="buscarPasajero.cs">
+    <Compile Include="buscarVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="buscarPasajero.Designer.cs">
+    <Compile Include="buscarVuelo.Designer.cs">
+      <DependentUpon>buscarVuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formVuelo.Designer.cs">
+      <DependentUpon>formVuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vueBD.cs" />
+    <Compile Include="BdConexion.cs" />
+    <Compile Include="Boletos\bolBD.cs" />
+    <Compile Include="Boletos\buscarBoleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boletos\buscarBoleto.Designer.cs">
+      <DependentUpon>buscarBoleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pasajero\buscarPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasajero\buscarPasajero.Designer.cs">
       <DependentUpon>buscarPasajero.cs</DependentUpon>
     </Compile>
-    <Compile Include="formPasajero.cs">
+    <Compile Include="destBD.cs" />
+    <Compile Include="Boletos\formBoleto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formPasajero.Designer.cs">
+    <Compile Include="Boletos\formBoleto.Designer.cs">
+      <DependentUpon>formBoleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pasajero\formPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasajero\formPasajero.Designer.cs">
       <DependentUpon>formPasajero.cs</DependentUpon>
     </Compile>
     <Compile Include="menu.cs">
@@ -75,16 +102,30 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="pasBd.cs" />
+    <Compile Include="Pasajero\pasBD.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
-    <Compile Include="_boleto.cs" />
-    <Compile Include="_pasajero.cs" />
-    <EmbeddedResource Include="buscarPasajero.resx">
+    <Compile Include="Boletos\_boleto.cs" />
+    <Compile Include="_destino.cs" />
+    <Compile Include="Pasajero\_pasajero.cs" />
+    <Compile Include="_vuelo.cs" />
+    <EmbeddedResource Include="Boletos\buscarBoleto.resx">
+      <DependentUpon>buscarBoleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscarVuelo.resx">
+      <DependentUpon>buscarVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formVuelo.resx">
+      <DependentUpon>formVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasajero\buscarPasajero.resx">
       <DependentUpon>buscarPasajero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formPasajero.resx">
+    <EmbeddedResource Include="Boletos\formBoleto.resx">
+      <DependentUpon>formBoleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasajero\formPasajero.resx">
       <DependentUpon>formPasajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu.resx">

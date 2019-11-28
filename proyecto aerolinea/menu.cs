@@ -47,7 +47,7 @@ namespace proyecto_aerolinea
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            //abrirHijo(new formBoleto());
+            abrirHijo(new formBoleto());
         }
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
@@ -59,6 +59,16 @@ namespace proyecto_aerolinea
             if (MessageBox.Show("Estas seguro de cerrar sesión?", "Alerta",
               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            abrirHijo(new formVuelo());
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
