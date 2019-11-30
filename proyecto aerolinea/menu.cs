@@ -70,5 +70,23 @@ namespace proyecto_aerolinea
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            abrirHijo(new formDestino());
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            abrirHijo(new formEmpleado());
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            abrirHijo(new formAvion());
+
+        }
     }
 }

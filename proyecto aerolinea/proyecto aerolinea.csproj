@@ -50,19 +50,57 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="buscarVuelo.cs">
+    <Compile Include="aviBD.cs" />
+    <Compile Include="buscarAvion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="buscarVuelo.Designer.cs">
+    <Compile Include="buscarAvion.Designer.cs">
+      <DependentUpon>buscarAvion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\buscarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\buscarEmpleado.Designer.cs">
+      <DependentUpon>buscarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Destinos\buscarDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Destinos\buscarDestino.Designer.cs">
+      <DependentUpon>buscarDestino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Destinos\formDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Destinos\formDestino.Designer.cs">
+      <DependentUpon>formDestino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\empleBD.cs" />
+    <Compile Include="Empleados\formEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\formEmpleado.Designer.cs">
+      <DependentUpon>formEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formAvion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAvion.Designer.cs">
+      <DependentUpon>formAvion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vuelos\buscarVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vuelos\buscarVuelo.Designer.cs">
       <DependentUpon>buscarVuelo.cs</DependentUpon>
     </Compile>
-    <Compile Include="formVuelo.cs">
+    <Compile Include="Vuelos\formVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formVuelo.Designer.cs">
+    <Compile Include="Vuelos\formVuelo.Designer.cs">
       <DependentUpon>formVuelo.cs</DependentUpon>
     </Compile>
-    <Compile Include="vueBD.cs" />
+    <Compile Include="Vuelos\vueBD.cs" />
     <Compile Include="BdConexion.cs" />
     <Compile Include="Boletos\bolBD.cs" />
     <Compile Include="Boletos\buscarBoleto.cs">
@@ -71,23 +109,23 @@
     <Compile Include="Boletos\buscarBoleto.Designer.cs">
       <DependentUpon>buscarBoleto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pasajero\buscarPasajero.cs">
+    <Compile Include="Pasajeros\buscarPasajero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pasajero\buscarPasajero.Designer.cs">
+    <Compile Include="Pasajeros\buscarPasajero.Designer.cs">
       <DependentUpon>buscarPasajero.cs</DependentUpon>
     </Compile>
-    <Compile Include="destBD.cs" />
+    <Compile Include="Destinos\destBD.cs" />
     <Compile Include="Boletos\formBoleto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Boletos\formBoleto.Designer.cs">
       <DependentUpon>formBoleto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pasajero\formPasajero.cs">
+    <Compile Include="Pasajeros\formPasajero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pasajero\formPasajero.Designer.cs">
+    <Compile Include="Pasajeros\formPasajero.Designer.cs">
       <DependentUpon>formPasajero.cs</DependentUpon>
     </Compile>
     <Compile Include="menu.cs">
@@ -102,30 +140,50 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pasajero\pasBD.cs" />
+    <Compile Include="Pasajeros\pasBD.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Boletos\_boleto.cs" />
-    <Compile Include="_destino.cs" />
-    <Compile Include="Pasajero\_pasajero.cs" />
-    <Compile Include="_vuelo.cs" />
+    <Compile Include="Destinos\_destino.cs" />
+    <Compile Include="Pasajeros\_pasajero.cs" />
+    <Compile Include="Vuelos\_vuelo.cs" />
+    <Compile Include="Empleados\_empleado.cs" />
+    <Compile Include="_avion.cs" />
     <EmbeddedResource Include="Boletos\buscarBoleto.resx">
       <DependentUpon>buscarBoleto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="buscarVuelo.resx">
+    <EmbeddedResource Include="buscarAvion.resx">
+      <DependentUpon>buscarAvion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\buscarEmpleado.resx">
+      <DependentUpon>buscarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Destinos\buscarDestino.resx">
+      <DependentUpon>buscarDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Destinos\formDestino.resx">
+      <DependentUpon>formDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\formEmpleado.resx">
+      <DependentUpon>formEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAvion.resx">
+      <DependentUpon>formAvion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vuelos\buscarVuelo.resx">
       <DependentUpon>buscarVuelo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formVuelo.resx">
+    <EmbeddedResource Include="Vuelos\formVuelo.resx">
       <DependentUpon>formVuelo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pasajero\buscarPasajero.resx">
+    <EmbeddedResource Include="Pasajeros\buscarPasajero.resx">
       <DependentUpon>buscarPasajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Boletos\formBoleto.resx">
       <DependentUpon>formBoleto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pasajero\formPasajero.resx">
+    <EmbeddedResource Include="Pasajeros\formPasajero.resx">
       <DependentUpon>formPasajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu.resx">

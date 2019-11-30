@@ -46,7 +46,7 @@
             this.usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(102)))));
             this.usuario.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuario.ForeColor = System.Drawing.Color.Gainsboro;
-            this.usuario.Location = new System.Drawing.Point(72, 329);
+            this.usuario.Location = new System.Drawing.Point(86, 328);
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(156, 30);
             this.usuario.TabIndex = 0;
@@ -58,7 +58,7 @@
             this.contra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(102)))));
             this.contra.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contra.ForeColor = System.Drawing.Color.Gainsboro;
-            this.contra.Location = new System.Drawing.Point(298, 329);
+            this.contra.Location = new System.Drawing.Point(312, 328);
             this.contra.Name = "contra";
             this.contra.Size = new System.Drawing.Size(156, 30);
             this.contra.TabIndex = 1;
@@ -72,7 +72,7 @@
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(73, 277);
+            this.label1.Location = new System.Drawing.Point(87, 276);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 38);
             this.label1.TabIndex = 3;
@@ -86,7 +86,7 @@
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(293, 288);
+            this.label2.Location = new System.Drawing.Point(307, 287);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 27);
             this.label2.TabIndex = 3;
@@ -99,7 +99,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(200, 418);
+            this.button1.Location = new System.Drawing.Point(223, 425);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 39);
             this.button1.TabIndex = 2;

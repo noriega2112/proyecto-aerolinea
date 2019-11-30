@@ -57,7 +57,7 @@ namespace proyecto_aerolinea
         {
             int vuelosTotales = vueBD.totalVuelos();
             Random rnd = new Random();
-            int n = rnd.Next(1, vuelosTotales);  // crea un numero aleatorio entre 1 y el total de vuelos registrados
+            int n = rnd.Next(1, vuelosTotales+1);  // crea un numero aleatorio entre 1 y el total de vuelos registrados
             return n;
         }
 

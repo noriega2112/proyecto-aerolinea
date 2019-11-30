@@ -8,13 +8,13 @@ using MySql.Data.MySqlClient;
 
 namespace proyecto_aerolinea
 {
-    class destBD
+    public class destBD
     {
 
         public static int Agregar(_destino pDestino)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(String.Format("Insert into boleto(dest_nom) values('{0}')", pDestino.dest_nom), BdConexion.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(String.Format("Insert into destino(dest_nom) values('{0}')", pDestino.dest_nom), BdConexion.ObtenerConexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }

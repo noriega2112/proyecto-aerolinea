@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proyecto_aerolinea
 {
-    public partial class formVuelo : Form
+    public partial class formDestino : Form
     {
-        public formVuelo()
+        public formDestino()
         {
             InitializeComponent();
 
@@ -22,9 +22,9 @@ namespace proyecto_aerolinea
 
         bool validar()
         {
-            if (string.IsNullOrWhiteSpace(idAviontxt.Text))
+            if (string.IsNullOrWhiteSpace(destNom.Text))
             {
-                error.SetError(idAviontxt, "Seleccione un vuelo .");
+                error.SetError(destNom, "Ingrese un destino");
                 return false;
             }
             else
@@ -33,31 +33,29 @@ namespace proyecto_aerolinea
 
         void limpiar()
         {
-            idAviontxt.Clear();
-            dtp.ResetText();
+            destNom.Clear();
         }
 
-        public _vuelo VueloActual { get; set; }
+        public _destino VueloActual { get; set; }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (validar())
             {
-                _vuelo pVuelo = new _vuelo();
-                pVuelo.avi_id = Convert.ToInt16(idAviontxt.Text.Trim());
-                pVuelo.vue_fecha = dtp.Value.ToString("yyyy-MM-dd");
+                _destino pDestino = new _destino();
+                pDestino.dest_nom = destNom.Text.Trim();
 
-                int resultado = vueBD.Agregar(pVuelo);
+                int resultado = destBD.Agregar(pDestino);
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Vuelo Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Destino Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     error.Clear();
                     limpiar();
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo guardar el Vuelo", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("No se pudo guardar el destino", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -65,13 +63,12 @@ namespace proyecto_aerolinea
         private void consultarbtn_Click(object sender, EventArgs e)
         {
             error.Clear();
-            buscarVuelo buscar = new buscarVuelo();
+            buscarDestino buscar = new buscarDestino();
             buscar.ShowDialog();
-            if (buscar.vueloSeleccionado != null)
+            if (buscar.destinoSeleccionado != null)
             {
-                VueloActual = buscar.vueloSeleccionado;
-                idAviontxt.Text = Convert.ToString(buscar.vueloSeleccionado.avi_id);
-                dtp.Text = buscar.vueloSeleccionado.vue_fecha;
+                VueloActual = buscar.destinoSeleccionado;
+                destNom.Text = buscar.destinoSeleccionado.dest_nom;
                 
                 ingresarbtn.Hide();
             }
@@ -81,14 +78,13 @@ namespace proyecto_aerolinea
         {
             if (validar())
             {
-                _vuelo pVuelo = new _vuelo();
-                pVuelo.vue_id = VueloActual.vue_id;
-                pVuelo.avi_id = Convert.ToInt16(idAviontxt.Text.Trim());
-                pVuelo.vue_fecha = dtp.Value.ToString("yyyy-MM-dd");
+                _destino pDestino = new _destino();
+                pDestino.dest_id = VueloActual.dest_id;
+                pDestino.dest_nom = destNom.Text.Trim();
 
-                if (vueBD.Actualizar(pVuelo) > 0)
+                if (destBD.Actualizar(pDestino) > 0)
                 {
-                    MessageBox.Show("Los datos del vuelo se actualizaron", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Los datos del destino se actualizaron", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     error.Clear();
                     limpiar();
                     ingresarbtn.Show();
@@ -104,12 +100,12 @@ namespace proyecto_aerolinea
         {
             
             
-                int id = VueloActual.vue_id;
+                int id = VueloActual.dest_id;
 
-                if (vueBD.Eliminar(id) > 0)
+                if (destBD.Eliminar(id) > 0)
                 {
                     error.Clear();
-                    MessageBox.Show("Los datos del vuelo se eliminaron", "Datos Eliminados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Los datos del destino se eliminaron", "Datos Eliminados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     error.Clear();
                     limpiar();
                     ingresarbtn.Show();
