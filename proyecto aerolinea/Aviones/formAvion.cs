@@ -42,6 +42,14 @@ namespace proyecto_aerolinea
             tipotxt.Clear();
         }
 
+        int rand()
+        {
+            int pilotosTotales = aviBD.totalPilotos();
+            Random rnd = new Random();
+            int n = rnd.Next(1, pilotosTotales + 1);  // crea un numero aleatorio entre 1 y el total de pilotos registrados
+            return n;
+        }
+
         public _avion avionActual { get; set; }
 
 
@@ -127,6 +135,13 @@ namespace proyecto_aerolinea
 
         private void formPasajero_Load(object sender, EventArgs e)
         {
+            idPiloto.Enabled = false;
+            nombrePiloto.Enabled = false;
+
+            int idAleatorio = rand();
+
+            idPiloto.Text = Convert.ToString(idAleatorio);
+            nombrePiloto.Text = aviBD.Buscar(idAleatorio);
         }
 
         private void nombretxt_TextChanged(object sender, EventArgs e)

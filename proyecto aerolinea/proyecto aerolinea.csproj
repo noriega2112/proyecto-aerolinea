@@ -50,12 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="aviBD.cs" />
-    <Compile Include="buscarAvion.cs">
+    <Compile Include="Aviones\aviBD.cs" />
+    <Compile Include="Aviones\buscarAvion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="buscarAvion.Designer.cs">
+    <Compile Include="Aviones\buscarAvion.Designer.cs">
       <DependentUpon>buscarAvion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pilotos\buscarPiloto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pilotos\buscarPiloto.Designer.cs">
+      <DependentUpon>buscarPiloto.cs</DependentUpon>
     </Compile>
     <Compile Include="Empleados\buscarEmpleado.cs">
       <SubType>Form</SubType>
@@ -82,12 +88,19 @@
     <Compile Include="Empleados\formEmpleado.Designer.cs">
       <DependentUpon>formEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="formAvion.cs">
+    <Compile Include="Aviones\formAvion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formAvion.Designer.cs">
+    <Compile Include="Aviones\formAvion.Designer.cs">
       <DependentUpon>formAvion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pilotos\formPiloto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pilotos\formPiloto.Designer.cs">
+      <DependentUpon>formPiloto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pilotos\pilBD.cs" />
     <Compile Include="Vuelos\buscarVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,12 +162,16 @@
     <Compile Include="Pasajeros\_pasajero.cs" />
     <Compile Include="Vuelos\_vuelo.cs" />
     <Compile Include="Empleados\_empleado.cs" />
-    <Compile Include="_avion.cs" />
+    <Compile Include="Aviones\_avion.cs" />
+    <Compile Include="Pilotos\_piloto.cs" />
     <EmbeddedResource Include="Boletos\buscarBoleto.resx">
       <DependentUpon>buscarBoleto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="buscarAvion.resx">
+    <EmbeddedResource Include="Aviones\buscarAvion.resx">
       <DependentUpon>buscarAvion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pilotos\buscarPiloto.resx">
+      <DependentUpon>buscarPiloto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados\buscarEmpleado.resx">
       <DependentUpon>buscarEmpleado.cs</DependentUpon>
@@ -168,8 +185,11 @@
     <EmbeddedResource Include="Empleados\formEmpleado.resx">
       <DependentUpon>formEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formAvion.resx">
+    <EmbeddedResource Include="Aviones\formAvion.resx">
       <DependentUpon>formAvion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pilotos\formPiloto.resx">
+      <DependentUpon>formPiloto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vuelos\buscarVuelo.resx">
       <DependentUpon>buscarVuelo.cs</DependentUpon>

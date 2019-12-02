@@ -38,6 +38,7 @@
             this.idPiloto = new System.Windows.Forms.TextBox();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.tipotxt = new System.Windows.Forms.TextBox();
+            this.nombrePiloto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,7 +133,7 @@
             this.idPiloto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idPiloto.Location = new System.Drawing.Point(54, 233);
             this.idPiloto.Name = "idPiloto";
-            this.idPiloto.Size = new System.Drawing.Size(210, 25);
+            this.idPiloto.Size = new System.Drawing.Size(28, 25);
             this.idPiloto.TabIndex = 2;
             this.idPiloto.TextChanged += new System.EventHandler(this.nombretxt_TextChanged);
             // 
@@ -149,6 +150,15 @@
             this.tipotxt.TabIndex = 2;
             this.tipotxt.TextChanged += new System.EventHandler(this.nombretxt_TextChanged);
             // 
+            // nombrePiloto
+            // 
+            this.nombrePiloto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombrePiloto.Location = new System.Drawing.Point(88, 233);
+            this.nombrePiloto.Name = "nombrePiloto";
+            this.nombrePiloto.Size = new System.Drawing.Size(176, 25);
+            this.nombrePiloto.TabIndex = 2;
+            this.nombrePiloto.TextChanged += new System.EventHandler(this.nombretxt_TextChanged);
+            // 
             // formAvion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,6 +166,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(31)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(700, 550);
             this.Controls.Add(this.tipotxt);
+            this.Controls.Add(this.nombrePiloto);
             this.Controls.Add(this.idPiloto);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -184,5 +195,6 @@
         private System.Windows.Forms.TextBox idPiloto;
         private System.Windows.Forms.ErrorProvider error;
         private System.Windows.Forms.TextBox tipotxt;
+        private System.Windows.Forms.TextBox nombrePiloto;
     }
 }

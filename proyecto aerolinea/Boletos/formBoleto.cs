@@ -97,7 +97,8 @@ namespace proyecto_aerolinea
             if (buscar.boletoSeleccionado != null)
             {
                 BoletoActual = buscar.boletoSeleccionado;
-                string nombrePasajero = pasBD.obtenerPasajero(buscar.boletoSeleccionado.pas_id).nombre; //utilizar pasBD para obtener el nombre del pasajero seleccionado
+                //string nombrePasajero = pasBD.obtenerPasajero(buscar.boletoSeleccionado.pas_id).nombre; //utilizar pasBD para obtener el nombre del pasajero seleccionado
+                string nombrePasajero = bolBD.nombrePasajero(buscar.boletoSeleccionado.bol_id);
                 idPasajero.Text = Convert.ToString(buscar.boletoSeleccionado.pas_id);
                 pasajerotxt.Text = nombrePasajero;
                 dtp.Text = buscar.boletoSeleccionado.bol_fecha;
@@ -196,11 +197,10 @@ namespace proyecto_aerolinea
 
             if (pasajero.pasajeroSeleccionado != null)
             {
-                pasajerotxt.Text = pasajero.pasajeroSeleccionado.nombre;
+                pasajerotxt.Text = pasajero.pasajeroSeleccionado.nombre + ' ' + pasajero.pasajeroSeleccionado.apellido;
                 idPasajero.Text = Convert.ToString(pasajero.pasajeroSeleccionado.id);
             }
-            else
-                pasajerotxt.Clear();
+            
             
         }
 

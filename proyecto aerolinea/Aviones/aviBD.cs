@@ -32,7 +32,19 @@ namespace proyecto_aerolinea
             return pAvion;
         }
 
-
+        public static int totalPilotos()
+        {
+            int total = 0;
+            MySqlConnection conexion = BdConexion.ObtenerConexion();
+            MySqlCommand _comando = new MySqlCommand(String.Format("select count(*) from piloto;"), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                total = _reader.GetInt16(0);
+            }
+            conexion.Close();
+            return total;
+        }
 
         public static List<_avion> BuscarT()
         {
@@ -51,7 +63,18 @@ namespace proyecto_aerolinea
             return _lista;
         }
 
-
+        public static string Buscar(int id)
+        {
+            string nombrePiloto = " ";
+            List<_boleto> _lista = new List<_boleto>();
+            MySqlCommand _comando = new MySqlCommand(String.Format("select concat(emp_nom , ' ', emp_ape) from piloto, avion, empleado where piloto.pil_id = avion.pil_id and piloto.emp_id = empleado.emp_id and avi_id = '{0}';", id), BdConexion.ObtenerConexion());
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                nombrePiloto = _reader.GetString(0);
+            }
+            return nombrePiloto;
+        }
 
         public _avion avionActual
         {

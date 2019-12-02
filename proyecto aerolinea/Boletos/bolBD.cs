@@ -36,6 +36,19 @@ namespace proyecto_aerolinea
             conexion.Close();
             return pBoleto;
         }
+        public static string nombrePasajero(int pas_id)
+        {
+            string nombrePas = "";
+            MySqlConnection conexion = BdConexion.ObtenerConexion();
+            MySqlCommand _comando = new MySqlCommand(String.Format("select pas_nom, pas_ape from boleto, pasajero where boleto.pas_id = pasajero.pas_id AND bol_id='{0}'", pas_id), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                nombrePas = _reader.GetString(0) + ' '  + _reader.GetString(1);
+            }
+            conexion.Close();
+            return nombrePas;
+        }
 
 
 

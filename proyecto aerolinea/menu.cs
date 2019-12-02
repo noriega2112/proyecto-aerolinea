@@ -88,5 +88,11 @@ namespace proyecto_aerolinea
             abrirHijo(new formAvion());
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            abrirHijo(new formPiloto());
+
+        }
     }
 }
