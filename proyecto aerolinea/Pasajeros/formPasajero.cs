@@ -27,6 +27,11 @@ namespace proyecto_aerolinea
                 error.SetError(nombretxt, "Ingrese un nombre.");
                 return false;
             }
+            else if (string.IsNullOrWhiteSpace(apellidotxt.Text))
+            {
+                error.SetError(apellidotxt, "Ingrese un apellido.");
+                return false;
+            }
             else if (string.IsNullOrWhiteSpace(cmbgenero.Text))
             {
                 error.SetError(cmbgenero, "Seleccione un género.");

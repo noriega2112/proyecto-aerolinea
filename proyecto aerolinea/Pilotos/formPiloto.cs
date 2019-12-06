@@ -155,6 +155,8 @@ namespace proyecto_aerolinea
         {
             prueba.Text = Convert.ToString(trackBar1.Value);
             idEmpleadotxt.Enabled = false;
+            nombreEmpleado.Enabled = false;
+
         }
 
         private void nombretxt_TextChanged(object sender, EventArgs e)

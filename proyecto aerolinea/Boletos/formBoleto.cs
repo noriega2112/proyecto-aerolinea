@@ -159,6 +159,8 @@ namespace proyecto_aerolinea
         {
             idVuelo.Enabled = false;
             idDestino.Enabled = false;
+            idPasajero.Enabled = false;
+            pasajerotxt.Enabled = false;
             DataTable tabla = new DataTable();
 
             string query = "Select dest_id, dest_nom from destino;";
@@ -188,6 +190,8 @@ namespace proyecto_aerolinea
         private void pasajerotxt_TextChanged(object sender, EventArgs e)
         {
             error.Clear();
+
+            
         }
 
         private void pasajerobtn_Click(object sender, EventArgs e)
@@ -207,6 +211,29 @@ namespace proyecto_aerolinea
         private void costotxt_KeyDown(object sender, KeyEventArgs e)
         {
 
+        }
+
+        private void idPasajero_TextChanged(object sender, EventArgs e)
+        {
+            //int id;
+            //Int32.TryParse(idPasajero.Text, out id);
+            //if (id > 0)
+            //{
+
+            //    _boleto llenar = bolBD.obtenerBoleto(Convert.ToInt16(idPasajero.Text));
+
+            //    string nombrePasajero = bolBD.nombrePasajero(llenar.bol_id);
+
+            //    //idPasajero.Text = Convert.ToString(llenar.pas_id);
+            //    pasajerotxt.Text = nombrePasajero;
+            //    dtp.Text = llenar.bol_fecha;
+            //    idDestino.Text = Convert.ToString(llenar.dest_id);
+            //    costotxt.Text = Convert.ToString(llenar.bol_costo);
+            //}
+            //else
+            //{
+            //    error.SetError(pasajerotxt, "Ingrese un id válido.");
+            //}
         }
     }
 }

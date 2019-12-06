@@ -249,6 +249,7 @@
             this.idPasajero.Name = "idPasajero";
             this.idPasajero.Size = new System.Drawing.Size(28, 25);
             this.idPasajero.TabIndex = 6;
+            this.idPasajero.TextChanged += new System.EventHandler(this.idPasajero_TextChanged);
             // 
             // formBoleto
             // 
